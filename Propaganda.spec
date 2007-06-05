@@ -1,7 +1,7 @@
 Summary:	Desktop Enhancements For Linux 
 Name:		Propaganda
-Version: 1
-Release: 11mdk
+Version:	1
+Release:	%mkrel 12
 License:	GPL
 Group:		Graphical desktop/Other
 URL:		http://propaganda.system12.com/
@@ -15,6 +15,7 @@ BuildRoot:	%_tmppath/%name-%version-%release-root
 Obsoletes:	gnome-imglib desktop-backgrounds
 Provides:	gnome-imglib desktop-backgrounds
 BuildArch:	noarch
+BuildRequires:	findutils
 
 %description
 Propaganda, at its core, is basically a collection of "seamless tiles"..
@@ -260,70 +261,100 @@ cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-For-E/.directory
 %install
 rm -rf $RPM_BUILD_ROOT
 
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/pixmaps/backgrounds
-cp -ar $RPM_BUILD_DIR/%{name}-1/* $RPM_BUILD_ROOT%{_datadir}/pixmaps/backgrounds
-
-rm -fr $RPM_BUILD_ROOT%{_datadir}/pixmaps/backgrounds/{README*,COPYING}
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/wallpapers
+cp -ar $RPM_BUILD_DIR/%{name}-1/Propaganda* $RPM_BUILD_ROOT%{_datadir}/wallpapers
+find $RPM_BUILD_ROOT%{_datadir}/wallpapers -type f -not \
+	\( -name .directory -or -iname \*.html -or -iname \*.JPG \) | xargs rm
 
 %clean
 rm -fr $RPM_BUILD_ROOT
 
 %files Vol1
 %defattr(-, root, root)
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol1
+%dir %{_datadir}/wallpapers/%{name}-Vol1
+%{_datadir}/wallpapers/%{name}-Vol1
+%doc README README-PROPAGANDA COPYING %{name}-Vol1/script.perl
 
 %files Vol2
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol2 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol2
+%{_datadir}/wallpapers/%{name}-Vol2
+%doc README README-PROPAGANDA COPYING %{name}-Vol2/script.perl
 
 %files Vol3
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol3 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol3
+%{_datadir}/wallpapers/%{name}-Vol3
+%doc README README-PROPAGANDA COPYING %{name}-Vol3/script.perl
 
 %files Vol4
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol4 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol4
+%{_datadir}/wallpapers/%{name}-Vol4
+%doc README README-PROPAGANDA COPYING %{name}-Vol4/script.perl
  
 %files Vol5
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol5 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol5
+%{_datadir}/wallpapers/%{name}-Vol5
+%doc README README-PROPAGANDA COPYING %{name}-Vol5/script.perl
  
 %files Vol6
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol6 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol6
+%{_datadir}/wallpapers/%{name}-Vol6
+%doc README README-PROPAGANDA COPYING %{name}-Vol6/script.perl
  
 %files Vol7
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol7 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol7
+%{_datadir}/wallpapers/%{name}-Vol7
+%doc README README-PROPAGANDA COPYING %{name}-Vol7/script.perl
  
 %files Vol8
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol8 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol8
+%{_datadir}/wallpapers/%{name}-Vol8
+%doc README README-PROPAGANDA COPYING %{name}-Vol8/script.perl
 
 %files Vol9
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol9
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol9
+%{_datadir}/wallpapers/%{name}-Vol9
+%doc README README-PROPAGANDA COPYING %{name}-Vol9/script.perl
  
 %files Vol10 
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol10
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol10
+%{_datadir}/wallpapers/%{name}-Vol10
+%doc README README-PROPAGANDA COPYING %{name}-Vol10/script.perl
  
 %files Vol11
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol11
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol11
+%{_datadir}/wallpapers/%{name}-Vol11
+%doc README README-PROPAGANDA COPYING %{name}-Vol11/script.perl
  
 %files Vol12
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol12
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-Vol12
+%{_datadir}/wallpapers/%{name}-Vol12
+%doc README README-PROPAGANDA COPYING %{name}-Vol12/script.perl
 
 %files Vol13
 %defattr(-, root, root)
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol13
+%dir %{_datadir}/wallpapers/%{name}-Vol13
+%{_datadir}/wallpapers/%{name}-Vol13
+%doc README README-PROPAGANDA COPYING %{name}-Vol13/script.perl
 
 %files Vol14
 %defattr(-, root, root)
-%{_datadir}/pixmaps/backgrounds/%{name}-Vol14
+%dir %{_datadir}/wallpapers/%{name}-Vol14
+%{_datadir}/wallpapers/%{name}-Vol14
+%doc README README-PROPAGANDA COPYING %{name}-Vol14/script.perl
 
 %files For-E
-%defattr(-, root, root) 
-%{_datadir}/pixmaps/backgrounds/%{name}-For-E 
+%defattr(-, root, root)
+%dir %{_datadir}/wallpapers/%{name}-For-E
+%{_datadir}/wallpapers/%{name}-For-E
+%doc README README-PROPAGANDA COPYING %{name}-For-E/script.perl
