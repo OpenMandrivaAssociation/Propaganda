@@ -11,7 +11,6 @@ Source1:	Desktop-Propaganda
 Source2:	Propaganda-Vol13.tar.bz2
 Source3:	Propaganda-Vol14.tar.bz2
 
-BuildRoot:	%_tmppath/%name-%version-%release-root
 Obsoletes:	gnome-imglib desktop-backgrounds
 Provides:	gnome-imglib desktop-backgrounds
 BuildArch:	noarch
