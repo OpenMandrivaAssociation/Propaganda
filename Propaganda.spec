@@ -1,7 +1,7 @@
 Summary:	Desktop Enhancements For Linux 
 Name:		Propaganda
 Version:	1
-Release:	%mkrel 12
+Release:	%mkrel 14
 License:	GPL
 Group:		Graphical desktop/Other
 URL:		http://propaganda.system12.com/
