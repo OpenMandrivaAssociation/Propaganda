@@ -241,28 +241,28 @@ them ideal for use in 3D applications, or simply as desktop wallpaper.
 
 %setup -q -c -n %{name}-1 -a 0 -a 2 -a 3
 
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol1/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol2/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol3/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol4/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol5/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol6/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol7/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol8/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol9/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol10/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol11/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol12/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol13/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-Vol14/.directory
-cp %{SOURCE1} $RPM_BUILD_DIR/%{name}-1/Propaganda-For-E/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol1/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol2/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol3/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol4/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol5/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol6/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol7/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol8/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol9/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol10/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol11/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol12/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol13/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-Vol14/.directory
+cp %{SOURCE1} %{_builddir}/%{name}-1/Propaganda-For-E/.directory
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/wallpapers
-cp -ar $RPM_BUILD_DIR/%{name}-1/Propaganda* $RPM_BUILD_ROOT%{_datadir}/wallpapers
+cp -ar %{_builddir}/%{name}-1/Propaganda* $RPM_BUILD_ROOT%{_datadir}/wallpapers
 find $RPM_BUILD_ROOT%{_datadir}/wallpapers -type f -not \
 	\( -name .directory -or -iname \*.html -or -iname \*.JPG \) | xargs rm
 
