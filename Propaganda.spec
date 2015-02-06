@@ -1,7 +1,7 @@
 Summary:	Desktop Enhancements For Linux 
 Name:		Propaganda
 Version:	1
-Release:	17
+Release:	18
 License:	GPL
 Group:		Graphical desktop/Other
 URL:		http://propaganda.system12.com/
