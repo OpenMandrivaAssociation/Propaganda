@@ -4,7 +4,7 @@ Version:	1
 Release:	18
 License:	GPL
 Group:		Graphical desktop/Other
-URL:		http://propaganda.system12.com/
+URL:		https://propaganda.system12.com/
 
 Source:		Propaganda-EVERYTHING.tar.bz2
 Source1:	Desktop-Propaganda
